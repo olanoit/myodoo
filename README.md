@@ -1,0 +1,2 @@
+# myodoo
+apps odoo
