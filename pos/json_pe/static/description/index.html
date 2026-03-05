@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JSON.PE - Consulta DNI y RUC</title>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div class="oe_span12">
+                <h2 class="oe_slogan" style="color:#875A7B; font-size: 42px; font-weight: 700; margin-bottom: 10px;">JSON.PE - Consulta DNI y RUC</h2>
+                <br>
+                <h3 class="oe_slogan" style="font-size: 20px; color: #666; font-weight: 300; margin-bottom: 30px;">Integración con API de json.pe para consultar DNI y RUC peruanos</h3>
+            </div>
+            <div class="oe_span12">
+                <div class="oe_demo oe_picture oe_screenshot">
+                    <img src="portada.png" alt="JSON.PE Portada" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Descripción -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div class="oe_span12">
+                <h2 class="oe_slogan" style="color:#875A7B; font-size: 32px; font-weight: 600; margin-bottom: 30px;">Descripción del Módulo</h2>
+                <div class="oe_span12" style="max-width: 900px; margin: 0 auto;">
+                    <p class="oe_mt32" style="font-size: 17px; line-height: 1.8; color: #333; text-align: center;">
+                        Este módulo integra Odoo con la API de <strong style="color: #875A7B;">json.pe</strong>, permitiendo consultar información de DNI y RUC peruanos directamente desde el formulario de contactos (Partners). Con esta integración, puedes autocompletar automáticamente los datos del contacto con información actualizada obtenida de la API oficial.
+                    </p>
+                    <p class="oe_mt16" style="font-size: 17px; line-height: 1.8; color: #333; text-align: center;">
+                        Optimiza tu flujo de trabajo eliminando la necesidad de ingresar manualmente la información de tus clientes y proveedores. El módulo valida formatos, maneja errores de manera inteligente y proporciona mensajes claros para una experiencia de usuario fluida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configuración del API Token - FONDO BLANCO -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div class="oe_span12">
+                <h2 class="oe_slogan" style="color:#875A7B; font-size: 32px; font-weight: 600; margin-bottom: 15px;">Configuración del API Token</h2>
+                <p class="oe_mt32 text-center" style="font-size: 18px; color: #666; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Antes de usar el módulo, es necesario crear una cuenta en app.json.pe y obtener tu API Token.
+                </p>
+            </div>
+            <div class="oe_span12">
+                <div class="oe_row" style="max-width: 1200px; margin: 0 auto;">
+                    <div class="oe_span4" style="padding: 30px; margin-bottom: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(135,90,123,0.15); border: 1px solid #e0e0e0; transition: transform 0.3s, box-shadow 0.3s;">
+                        <div class="oe_row_img oe_centered" style="margin-bottom: 25px;">
+                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #875A7B 0%, #a67ba6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 10px rgba(135,90,123,0.3);">
+                                <span style="font-size: 32px; color: black; font-weight: bold;">1</span>
+                            </div>
+                        </div>
+                        <h4 class="text-center" style="color: #875A7B; margin-bottom: 18px; font-size: 20px; font-weight: 600;"><b>Crear Cuenta</b></h4>
+                        <p class="text-justify" style="margin: 0; line-height: 1.7; color: #555; font-size: 15px;">
+                            Visita <a href="https://app.json.pe/" target="_blank" style="color: #875A7B; font-weight: bold; text-decoration: none;"><strong>app.json.pe</strong></a>, regístrate completando el formulario y verifica tu cuenta mediante el correo electrónico recibido.
+                        </p>
+                    </div>
+                    <div class="oe_span4" style="padding: 30px; margin-bottom: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(135,90,123,0.15); border: 1px solid #e0e0e0; transition: transform 0.3s, box-shadow 0.3s;">
+                        <div class="oe_row_img oe_centered" style="margin-bottom: 25px;">
+                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #875A7B 0%, #a67ba6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 10px rgba(135,90,123,0.3);">
+                                <span style="font-size: 32px; color: black; font-weight: bold;">2</span>
+                            </div>
+                        </div>
+                        <h4 class="text-center" style="color: #875A7B; margin-bottom: 18px; font-size: 20px; font-weight: 600;"><b>Obtener Token</b></h4>
+                        <p class="text-justify" style="margin: 0; line-height: 1.7; color: #555; font-size: 15px;">
+                            Inicia sesión en tu cuenta, navega a la sección de <strong>API Tokens</strong> y genera un nuevo token. Copia y guarda el token de manera segura.
+                        </p>
+                    </div>
+                    <div class="oe_span4" style="padding: 30px; margin-bottom: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(135,90,123,0.15); border: 1px solid #e0e0e0; transition: transform 0.3s, box-shadow 0.3s;">
+                        <div class="oe_row_img oe_centered" style="margin-bottom: 25px;">
+                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #875A7B 0%, #a67ba6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 10px rgba(135,90,123,0.3);">
+                                <span style="font-size: 32px; color: black; font-weight: bold;">3</span>
+                            </div>
+                        </div>
+                        <h4 class="text-center" style="color: #875A7B; margin-bottom: 18px; font-size: 20px; font-weight: 600;"><b>Configurar en Odoo</b></h4>
+                        <p class="text-justify" style="margin: 0; line-height: 1.7; color: #555; font-size: 15px;">
+                            Ve a <strong>Configuración → Configuración General</strong>, busca la sección <strong>JSON.PE</strong> y pega tu API Token. Guarda los cambios.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Usar los Botones -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div class="oe_span12">
+                <h2 class="oe_slogan" style="color:#875A7B; font-size: 32px; font-weight: 600; margin-bottom: 40px;">Cómo Usar los Botones DNI/RUC</h2>
+            </div>
+            <div class="oe_span12">
+                <div class="oe_row" style="max-width: 1200px; margin: 0 auto;">
+                    <div class="oe_span6">
+                        <div style="background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                            <div style="background: linear-gradient(135deg, #875A7B 0%, #a67ba6 100%); color: white; padding: 20px; text-align: center;">
+                                <h4 style="margin: 0; font-size: 22px; font-weight: 600;"><strong>Consultar DNI</strong></h4>
+                            </div>
+                            <div style="padding: 30px;">
+                                <ol style="padding-left: 25px; margin: 0; line-height: 2; color: #555; font-size: 15px;">
+                                    <li>Abre o crea un contacto (Partner) en Odoo</li>
+                                    <li>Ingresa el <strong>DNI</strong> (8 dígitos) en el campo correspondiente</li>
+                                    <li>Haz clic en el botón <strong>"Consultar DNI"</strong> ubicado en el encabezado del formulario</li>
+                                    <li>El sistema consultará la API y autocompletará automáticamente:
+                                        <ul style="margin-top: 10px;">
+                                            <li>Nombre completo</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oe_span6">
+                        <div style="background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                            <div style="background: linear-gradient(135deg, #875A7B 0%, #a67ba6 100%); color: white; padding: 20px; text-align: center;">
+                                <h4 style="margin: 0; font-size: 22px; font-weight: 600;"><strong>Consultar RUC</strong></h4>
+                            </div>
+                            <div style="padding: 30px;">
+                                <ol style="padding-left: 25px; margin: 0; line-height: 2; color: #555; font-size: 15px;">
+                                    <li>Abre o crea un contacto (Partner) en Odoo</li>
+                                    <li>Ingresa el <strong>RUC</strong> (11 dígitos) en el campo correspondiente</li>
+                                    <li>Haz clic en el botón <strong>"Consultar RUC"</strong> ubicado en el encabezado del formulario</li>
+                                    <li>El sistema consultará la API y autocompletará automáticamente:
+                                        <ul style="margin-top: 10px;">
+                                            <li>Nombre o Razón Social</li>
+                                            <li>Número de identificación fiscal (RUC)</li>
+                                            <li>Dirección completa</li>
+                                            <li>Ciudad/Distrito</li>
+                                            <li>Código postal (Ubigeo)</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_span12" style="margin-top: 30px;">
+                    <p class="text-center" style="color: #666; font-size: 15px; font-style: italic;">
+                        <strong>Nota:</strong> Los botones solo aparecerán si has ingresado un DNI o RUC válido en el formulario.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlaces y Recursos -->
+    <section class="oe_container oe_dark">
+        <div class="oe_row oe_spaced">
+            <div class="oe_span12">
+                <h2 class="oe_slogan" style="color:#875A7B; font-size: 32px; font-weight: 600; margin-bottom: 40px;">Enlaces y Recursos</h2>
+                <div class="oe_mt32 text-center" style="font-size: 16px; line-height: 2.5;">
+                    <p style="margin: 15px 0;">
+                        <a href="https://app.json.pe/" target="_blank" rel="noopener noreferrer" style="color: #875A7B; text-decoration: underline;">
+                            https://app.json.pe/
+                        </a>
+                    </p>
+                    <p style="margin: 15px 0;">
+                        <a href="http://json.pe/" target="_blank" rel="noopener noreferrer" style="color: #875A7B; text-decoration: underline;">
+                            http://json.pe/
+                        </a>
+                    </p>
+                    <p style="margin: 15px 0;">
+                        <a href="https://docs.json.pe/" target="_blank" rel="noopener noreferrer" style="color: #875A7B; text-decoration: underline;">
+                            https://docs.json.pe/
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

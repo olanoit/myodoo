@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Extender vista de formulario de partner -->
+        <record id="view_partner_form_inherit_json_pe" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.json.pe</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <!-- Agregar campos DNI y RUC después del campo vat (NIF) -->
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="dni" placeholder="12345678"/>
+                    <field name="ruc" placeholder="12345678901"/>
+                </xpath>
+                
+                <!-- Agregar botones en el header del formulario -->
+                <xpath expr="//header" position="inside">
+                    <button name="action_consultar_dni" 
+                            string="Consultar DNI" 
+                            type="object" 
+                            class="btn-secondary"
+                            invisible="not dni"/>
+                    <button name="action_consultar_ruc" 
+                            string="Consultar RUC" 
+                            type="object" 
+                            class="btn-secondary"
+                            invisible="not ruc"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Vista de lista de partner con campos DNI y RUC -->
+        <record id="view_partner_tree_inherit_json_pe" model="ir.ui.view">
+            <field name="name">res.partner.tree.inherit.json.pe</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="after">
+                    <field name="dni" optional="hide"/>
+                    <field name="ruc" optional="hide"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

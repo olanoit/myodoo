@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+	<record model="ir.ui.view" id="view_partner_form">
+		<field name="name">res.partner.view.form.inherit.l10n.pe.vat</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="l10n_latam_base.view_partner_latam_form" />
+		<field name="arch" type="xml">
+			<sheet position="before">
+				<header>
+					<button string="Search by RUC/DNI" type="object" name="update_document" context="{'force_update':True}" />
+					<field name="state" widget="statusbar" nolabel="1" statusbar_visible="ACTIVO,BAJA DE OFICIO" statusbar_colors="{'ACTIVO':'green','BAJA DE OFICIO':'red','BAJA PROVISIONAL':'red','SUSPENSION TEMPORAL':'red'}" invisible="not is_company" />
+				</header>
+			</sheet>
+			<xpath expr="//div[@name='button_box']" position="after">
+				<widget name="web_ribbon" title="Habido" invisible="not is_company or condition != 'HABIDO' or not active"/>
+				<widget name="web_ribbon" title="No Habido" bg_color="bg-danger" invisible="not is_company or condition == 'HABIDO' or not condition or not active" />
+			</xpath>
+			
+			<xpath expr="//label[@for='l10n_latam_identification_type_id']" position="attributes">
+				<attribute name="string">Tipo de Documento</attribute>
+			</xpath>
+			
+			<xpath expr="//field[@name='l10n_latam_identification_type_id']" position="attributes">
+				<attribute name="placeholder">Tipo</attribute>
+			</xpath>
+			
+			<xpath expr="//field[@name='vat']" position="attributes">
+				<attribute name="placeholder">Número</attribute>
+			</xpath>
+			
+			<xpath expr="//field[@name='category_id']" position="before">
+				<field name="condition" invisible="1" />
+				<field name="doc_type" invisible="1" />
+			</xpath>
+			
+			<xpath expr="//field[@name='category_id']" position="after">
+				<field name="good_contributor" readonly="1" force_save="1" invisible="doc_type != '6'" />
+				<field name="is_retention_agent" readonly="1" force_save="1" invisible="doc_type != '6'" />
+				<field name="auto_search" />
+				<field name="is_validate" invisible="1" />
+			</xpath>
+
+			<xpath expr="//page[@name='sales_purchases']" position="after">
+				<page name="sunat_details" string="SUNAT" invisible="doc_type != '6'">
+					<group name="container_sunat_general">
+						<group string="Información general">
+							<field name="legal_name" placeholder="Legal Name" required="doc_type == '6'" readonly="is_validate" force_save="1"/>
+							<field name="commercial_name" placeholder="Commercial Name" required="doc_type == '6'" force_save="1"/>
+							<field name="last_update" />
+						</group>
+					</group>
+				</page>
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista de configuración para API Token de json.pe -->
+        <record id="res_config_settings_view_form_inherit_json_pe" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.json.pe</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <!-- Agregar sección JSON.PE en la configuración general -->
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="JSON.PE" string="JSON.PE" data-key="json_pe">
+                        <h2>JSON.PE - Consulta DNI y RUC</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane">
+                                    <i class="fa fa-key" role="img" aria-label="API Token" title="API Token"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <span class="o_setting_name">API Token</span>
+                                    <div class="text-muted">
+                                        Token de autenticación para la API de json.pe.
+                                        Crea tu cuenta y obtén tu token en <a href="https://app.json.pe" target="_blank">app.json.pe</a>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="json_pe_api_token" password="True" placeholder="Ingresa tu API Token"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

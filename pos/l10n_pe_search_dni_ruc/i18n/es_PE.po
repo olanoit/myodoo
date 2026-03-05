@@ -1,0 +1,246 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * l10n_pe_search_dni_ruc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240912\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-29 16:08+0000\n"
+"PO-Revision-Date: 2024-10-29 16:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+#. module: l10n_pe_search_dni_ruc
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_company__vat_search_api
+msgid "API to Use"
+msgstr "API a Usar"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__auto_search
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__auto_search
+#, python-format
+msgid "Automatic Search"
+msgstr "Búsqueda Automática"
+
+#. module: l10n_pe_search_dni_ruc
+#: model_terms:ir.ui.view,arch_db:l10n_pe_search_dni_ruc.view_partner_form
+msgid "Caution"
+msgstr "Precaución"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__commercial_name
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__commercial_name
+#: model_terms:ir.ui.view,arch_db:l10n_pe_search_dni_ruc.view_partner_form
+#, python-format
+msgid "Commercial Name"
+msgstr "Nombre Comercial"
+
+#. module: l10n_pe_search_dni_ruc
+#: model:ir.model,name:l10n_pe_search_dni_ruc.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__condition
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__condition
+#, python-format
+msgid "Condition"
+msgstr "Condición"
+
+#. module: l10n_pe_search_dni_ruc
+#: model:ir.model,name:l10n_pe_search_dni_ruc.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#, python-format
+msgid ""
+"Could not establish district code, options not found or multiple results"
+msgstr "No se pudo establecer el código de distrito, opciones no encontradas o múltiples resultados."
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__doc_number
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__doc_number
+#, python-format
+msgid "Document Number"
+msgstr "Número de Documento"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#, python-format
+msgid "Document not found"
+msgstr "Documento no encontrado."
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__from_date
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__from_date
+#, python-format
+msgid "From Date"
+msgstr "Desde la Fecha"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__good_contributor
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__good_contributor
+#, python-format
+msgid "Good Contributor"
+msgstr "Buen Contribuyente"
+
+#. module: l10n_pe_search_dni_ruc
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__l10n_latam_identification_type_id
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__l10n_latam_identification_type_id
+msgid "Identification Type"
+msgstr "Tipo de Identificación"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,help:l10n_pe_search_dni_ruc.field_res_partner__auto_search
+#: model:ir.model.fields,help:l10n_pe_search_dni_ruc.field_res_users__auto_search
+#, python-format
+msgid ""
+"If selected, the RUC or DNI data will be searched on SUNAT when entered or "
+"changed"
+msgstr "Si se selecciona, los datos del RUC o DNI se buscarán en SUNAT al ser ingresados o cambiados."
+
+#. module: l10n_pe_search_dni_ruc
+#: model_terms:ir.ui.view,arch_db:l10n_pe_search_dni_ruc.view_partner_form
+msgid "Información general"
+msgstr "Información General"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#, python-format
+msgid "Invalid or unsupported document type"
+msgstr "Tipo de documento no válido o no soportado."
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#, python-format
+msgid "Invalid search type specified"
+msgstr "Tipo de búsqueda especificado no válido."
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__is_validate
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__is_validate
+#, python-format
+msgid "Is Validated"
+msgstr "Está Validado"
+
+#. module: l10n_pe_search_dni_ruc
+#: model:ir.model.fields.selection,name:l10n_pe_search_dni_ruc.selection__res_company__vat_search_api__jsonpe
+msgid "JSON-PE"
+msgstr "JSON-PE"
+
+#. module: l10n_pe_search_dni_ruc
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__doc_type
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__doc_type
+msgid "L10N Pe Vat Code"
+msgstr "Código L10N Pe Vat"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__legal_name
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__legal_name
+#: model_terms:ir.ui.view,arch_db:l10n_pe_search_dni_ruc.view_partner_form
+#, python-format
+msgid "Legal Name"
+msgstr "Nombre Legal"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#, python-format
+msgid "Operation could not be completed"
+msgstr "No se pudo completar la operación."
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#, python-format
+msgid "Please enter the document number"
+msgstr "Por favor, ingrese el número de documento."
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__resolution
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_users__resolution
+#, python-format
+msgid "Resolution"
+msgstr "Resolución"
+
+#. module: l10n_pe_search_dni_ruc
+#: model_terms:ir.ui.view,arch_db:l10n_pe_search_dni_ruc.view_company_form
+msgid "Search Service"
+msgstr "Servicio de Búsqueda"
+
+#. module: l10n_pe_search_dni_ruc
+#: model_terms:ir.ui.view,arch_db:l10n_pe_search_dni_ruc.view_partner_form
+msgid "Search by RUC/DNI"
+msgstr "Buscar por RUC/DNI"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_pe_search_dni_ruc.field_res_partner__state
+#, python-format
+msgid "Status"
+msgstr "Estado"
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#, python-format
+msgid ""
+"The document number already exists and violates the unique field constraint"
+msgstr "El número de documento ya existe y viola la restricción de campo único."
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#, python-format
+msgid "The entered DNI is incorrect"
+msgstr "El DNI ingresado es incorrecto."
+
+#. module: l10n_pe_search_dni_ruc
+#. odoo-python
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#: code:addons/l10n_pe_search_dni_ruc/models/res_partner.py:0
+#, python-format
+msgid "The entered RUC is incorrect"
+msgstr "El RUC ingresado es incorrecto."
+
+#. module: l10n_pe_search_dni_ruc
+#: model:ir.model.fields,help:l10n_pe_search_dni_ruc.field_res_partner__l10n_latam_identification_type_id
+#: model:ir.model.fields,help:l10n_pe_search_dni_ruc.field_res_users__l10n_latam_identification_type_id
+msgid "The type of identification"
+msgstr "El tipo de identificación"
