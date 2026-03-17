@@ -11,27 +11,35 @@ class ProductTemplateInherit(models.Model):
 
     image_url = fields.Char(string='URL de la imagen')
 
-    def get_image_from_url(self, url):
+    def _get_image_from_url(self, url):
         image = False
         if url:
-            if url.startswith(('http://', 'https://')):
-                image = base64.b64encode(requests.get(url).content)
-            else:
-                with open(url, 'rb') as file:
-                    image = base64.b64encode(file.read())
+            try:
+                if url.startswith(('http://', 'https://')):
+                    response = requests.get(url, timeout=10)
+                    if response.status_code == 200:
+                        image = base64.b64encode(response.content)
+                else:
+                    with open(url, 'rb') as f:
+                        image = base64.b64encode(f.read())
+            except Exception:
+                pass
         return image
 
-    @api.model
-    def create(self, vals):
-        if vals.get('image_url'):
-            vals['image_1920'] = self.get_image_from_url(vals['image_url'])
-            vals['image_url'] = False
-        return super().create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('image_url'):
+                vals['image_1920'] = self._get_image_from_url(vals['image_url'])
+                vals['image_url'] = False
+
+        return super().create(vals_list)
 
     def write(self, vals):
         if vals.get('image_url'):
-            vals['image_1920'] = self.get_image_from_url(vals['image_url'])
+            vals['image_1920'] = self._get_image_from_url(vals['image_url'])
             vals['image_url'] = False
+
         return super().write(vals)
 
 
