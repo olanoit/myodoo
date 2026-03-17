@@ -22,16 +22,13 @@
     'images': [
         'static/description/wallpaper.png'
     ],
-    'depends': [
-        'web',
-        'point_of_sale',
-    ],
+    'depends': ['base', 'web', 'point_of_sale'],
     'data': [
         'views/login_templates.xml',
     ],
     'assets': {
         'point_of_sale._assets_pos': [
-            'hide_powered_by_odoo/views/xml/hide_powered_by_odoo_message.xml',
+            'hide_powered_by_odoo/static/src/xml/hide_powered_by_odoo_message.xml',
         ],
     },
 
