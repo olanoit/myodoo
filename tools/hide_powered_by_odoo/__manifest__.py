@@ -28,7 +28,7 @@
     ],
     'assets': {
         'point_of_sale._assets_pos': [
-            'hide_powered_by_odoo/static/src/xml/hide_powered_by_odoo_message.xml',
+            # 'hide_powered_by_odoo/static/src/xml/hide_powered_by_odoo_message.xml',
         ],
     },
 
