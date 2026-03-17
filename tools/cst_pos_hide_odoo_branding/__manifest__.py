@@ -36,7 +36,6 @@
             'cst_pos_hide_odoo_branding/static/src/scss/customer_display.scss',
         ],
     },
-    "images": ["static/description/Banner.png"],
     "license": "LGPL-3",
     "installable": True,
     "application": False,
