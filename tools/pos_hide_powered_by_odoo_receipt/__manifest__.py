@@ -18,7 +18,7 @@
     'depends': ['base', 'web', 'point_of_sale'],
     'assets': {
         'point_of_sale._assets_pos': [
-            'codusic_pos_hide_powered_by_odoo_message_on_receipt/static/src/xml/hide_powered_by_odoo_message.xml',
+            'pos_hide_powered_by_odoo_receipt/static/src/xml/hide_powered_by_odoo_message.xml',
         ],
     },
     'images': ['static/description/banner.gif'],
