@@ -23,7 +23,8 @@
         'static/description/wallpaper.png'
     ],
     'depends': [
-        'web'
+        'web',
+        'point_of_sale',
     ],
     'data': [
         'views/login_templates.xml',
