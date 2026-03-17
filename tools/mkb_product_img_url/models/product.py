@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright 2020-23 Manish Kumar Bohra <manishkumarbohra@outlook.com>
 # License LGPL-3 - See http://www.gnu.org/licenses/Lgpl-3.0.html
-from odoo import models, fields, api,_
+from odoo import models, fields, api, _
 import requests
 import base64
 
@@ -9,7 +9,7 @@ import base64
 class ProductTemplateInherit(models.Model):
     _inherit = 'product.template'
 
-    image_url = fields.Char(string='Image URL')
+    image_url = fields.Char(string='URL de la imagen')
 
     @api.onchange('image_url')
     def get_image_from_url(self):
@@ -22,6 +22,7 @@ class ProductTemplateInherit(models.Model):
                 with open(self.image_url, 'rb') as file:
                     image = base64.b64encode(file.read())
         self.image_1920 = image
+        self.image_url = False
 
     @api.model
     def create(self, values):

@@ -19,7 +19,6 @@
     'website': 'https://www.codespheretech.in/',
     'category': 'Web',
     'version': '19.0.1.0.0',
-    'sequence': 0,
     'currency': 'USD',
     'price': '0.00',
     'depends': ['web', 'auth_signup'],
