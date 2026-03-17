@@ -20,7 +20,7 @@
     'website': 'https://innoway-solutions.com',
     'license': 'LGPL-3',
     'images': [
-        'static/description/wallpaper.png'     
+        'static/description/wallpaper.png'
     ],
     'depends': [
         'web'
@@ -28,6 +28,14 @@
     'data': [
         'views/login_templates.xml',
     ],
+    'assets': {
+        'point_of_sale._assets_pos': [
+            'set_default_customer_in_pos/static/src/js/pos_order.js',
+            'hide_powered_by_odoo/views/xml/hide_powered_by_odoo_message.xml',
+
+        ],
+    },
+
     'demo': [],
     'installable': True,
     'application': True,
