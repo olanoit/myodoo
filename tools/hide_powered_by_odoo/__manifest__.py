@@ -30,9 +30,7 @@
     ],
     'assets': {
         'point_of_sale._assets_pos': [
-            'set_default_customer_in_pos/static/src/js/pos_order.js',
             'hide_powered_by_odoo/views/xml/hide_powered_by_odoo_message.xml',
-
         ],
     },
 
