@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('pos-receipt-order-data')]//span" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+    </t>
+    <t t-name="pos.Navbar" t-inherit="point_of_sale.Navbar" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('pos-centerheader')]//div[hasclass('pos-logo')]" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+    </t>
+    <t t-name="pos.SaverScreen" t-inherit="point_of_sale.SaverScreen" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('flex-grow-1')]//div[hasclass('pos-logo')]" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+    </t>
+</templates>
