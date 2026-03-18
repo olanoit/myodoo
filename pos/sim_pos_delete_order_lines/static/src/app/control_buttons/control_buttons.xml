@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="rcs_pos_delete_order_lines.SelectPartnerButton"
+       t-inherit="point_of_sale.SelectPartnerButton"
+       t-inherit-mode="extension">
+
+        <xpath expr="//button" position="after">
+            <button class="set-partner btn btn-danger btn-lg lh-lg text-truncate w-auto ms-2"
+                    t-on-click="() => this.onClearLines()">
+                Borrar todo
+            </button>
+        </xpath>
+
+    </t>
+</templates>
+
