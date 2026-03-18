@@ -40,7 +40,7 @@ class IrUiMenu(models.Model):
         menus = super()._filter_visible_menus()
 
         # Allow system admin to see everything
-        # if self.env.user.role == 'group_system':
-        #     return menus
+        if self.env.user.role == 'group_system':
+            return menus
         return menus.filtered(
             lambda menu: self.env.user.id not in menu.restrict_user_ids.ids)
